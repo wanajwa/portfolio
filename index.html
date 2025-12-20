@@ -1,47 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Najwa | Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Primary Meta Tags -->
+    <title>Portfolio Template - Open source</title>
+    <meta name="title" content="Portfolio Template - Open source" />
+    <meta
+      name="description"
+      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
+    />
 
-    <h1>Wan Najwa</h1>
-    <p>Computer Science Student | Backend Developer</p>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://github.com/wanajwa/portfolio"
+    />
+    <meta property="og:title" content="Portfolio Template - Open source" />
+    <meta
+      property="og:description"
+      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
+    />
+    <meta
+      property="og:image"
+      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
+    />
 
-    <section>
-        <h2>About Me</h2>
-        <p>
-            I am a Computer Science student interested in backend development,
-            Java, and web systems.
-        </p>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://github.com/wanajwa/portfolio"
+    />
+    <meta property="twitter:title" content="Portfolio Template - Open source" />
+    <meta
+      property="twitter:description"
+      content="Build or customize your portfolio website using this super easy template. Free to use if you are a member of the community or a contributor to this project"
+    />
+    <meta
+      property="twitter:image"
+      content="https://user-images.githubusercontent.com/62628408/150613011-b78a7f5a-0af1-4312-aab0-0022e7258693.png"
+    />
+
+    <!-- Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/favicon/android-chrome-512x512.png"
+    />
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utilities.css" />
+  </head>
+  <body>
+    <header id="hero">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <!-- Logo -->
+          <!-- <h1 id="logo">
+            <a href="https://github.com/wanajwa/portfolio"
+              ><img src="./assets/logo.png" alt="Your Logo"
+            /></a>
+          </h1> -->
+          <!-- Navbar links -->
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="#about-me">ABOUT ME</a></li>
+            <li><a class="nav-link" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link" id="nav-contact" href="#footer">CONTACT</a></li>
+            
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="assets/moon.svg" />
+                <img class="sun" src="assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+      <section class="header-container">
+        <img
+          class="profile-image"
+          src="assets/Myself.png"
+          alt=""
+        />
+        <h1>Hi I'm Wan Najwa</h1>
+        <p>Computer Science Student | Software Developer</p>
+        <div class="content-text">
+          <h2>Building digital</h2>
+          <h2>products, brands, and experience.</h2>
+
+          <p>
+            Welcome to my e-portfolio! This portfolio showcases my academic journey, technical skills, and personal growth as a Computer Science student.
+          </p>
+        </div>
+        <a
+          href="https://github.com/wanajwa/portfolio"
+          class="btn btn-secondary"
+          target="_blank"
+          >Connect With Me</a
+        >
+      </section>
+    </header>
+    
+    <div class="division"></div>
+
+    <!-- About Me -->
+    <section id="about-me" class="education container">
+      <div class="about-layout">
+        <div class="about-image">
+          <img src="assets/Myself2.jpg" alt="Najwa profile" />
+        </div>
+        <div class="about-text content-text">
+          <h2 class="about-title">About Me</h2>
+          <p class="about-desc">
+            Hello! My name is Najwa, and I am a second-year Computer Science student with a strong interest in software development and system design. I am motivated to continuously improve my technical skills and apply my knowledge through hands-on academic projects. This portfolio highlights my learning journey, technical abilities, and personal development throughout my studies.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="academic-block">
+        <h3 class="about-subtitle">Academic</h3>
+        <p class="co-desc">Academic timeline from school to university</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <img class="timeline-img" src="assets/education/SK.png" alt="SK" />
+          <div class="timeline-year">2011-2016</div>
+          <div class="timeline-content">
+            <h3>SK Ganun</h3>
+            <p>Primary School</p>
+            <ul class="timeline-experience">
+              <li>Class representative (2015)</li>
+              <li>Science fair participant</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <img class="timeline-img" src="assets/education/SMK..png" alt="SMK" />
+          <div class="timeline-year">2017-2021</div>
+          <div class="timeline-content">
+            <h3>Sekolah Menengah Kebangsaan Dato Haji Talib Karim</h3>
+            <p>Secondary School</p>
+            <ul class="timeline-experience">
+              <li>Vocational internship at local company</li>
+              <li>Completed technical projects in programming</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <img class="timeline-img" src="assets/education/KMM.png" alt="Matriculation" />
+          <div class="timeline-year">2022-2023</div>
+          <div class="timeline-content">
+            <h3>Kolej Matrikulasi Melaka</h3>
+            <p>Pre-university qualification</p>
+            <ul class="timeline-experience">
+              <li>Focused on advanced mathematics and science</li>
+              <li>Completed a mini research project</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <img class="timeline-img" src="assets/profile-image.svg" alt="UTeM" />
+          <div class="timeline-year">2023 - Present</div>
+          <div class="timeline-content">
+            <h3>Universiti Teknikal Malaysia Melaka</h3>
+            <p>Bachelor / Current studies</p>
+            <ul class="timeline-experience">
+              <li>Coursework: Data Structures, Algorithms, Database Systems</li>
+              <li>Member of Coding Club; building web projects</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="co-layout">
+        <div class="co-text">
+          <h3 class="about-subtitle">Co-curricular</h3>
+          <p class="co-desc">In addition to my academic pursuits, I was actively involved in co-curricular activities and served as the Vice President of the Gamelan Club at my university during the previous semester. Through this role, I developed strong leadership, teamwork, and communication skills, as gamelan performances require high levels of coordination, discipline, and collaboration among members. Managing leadership responsibilities alongside academic commitments strengthened my time management and organizational skills, which are essential in both academic and professional environments.</p>
+        </div>
+      </div>
+
+      <div class="co-gallery container">
+        <div class="co-card">
+          <img src="assets/gamelan.jpg" alt="Gallery image 1" />
+        </div>
+        <div class="co-card">
+          <img src="assets/gamelan2.jpg" alt="Gallery image 2" />
+        </div>
+        <div class="co-card">
+          <img src="assets/gamelan3.jpg" alt="Gallery image 3" />
+        </div>
+      </div>
+
     </section>
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Java, JSP, Servlets</li>
-            <li>MySQL</li>
-            <li>HTML, CSS</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
-
-    <section>
+    <div class="division"></div>
+    <!-- Projects -->
+    <section id="projects" class="project-container container">
+      <div class="content-text">
         <h2>Projects</h2>
-        <ul>
-            <li><b>eBazaar System</b> – Java Servlet-based system</li>
-            <li><b>Pig Breed Identification</b> – Expert system project</li>
-        </ul>
+        <p>Check out some of my personal and paid projects</p>
+      </div>
+      <div class="project-layout"></div>
+
+      <article class="project">
+         <!-- Project 1 -->
+  <a href="project-flora.html" class="card">
+    <div class="project-info">
+      <div class="project-bio">
+        <h3>Flora Bouquet Flower System</h3>
+        <p>C++</p>
+      </div>
+
+      <div class="project-link">
+        <!-- Use span or button instead of a inside the card -->
+        <span onclick="window.open('https://github.com/wanajwa/FloraBouquet','_blank')">
+          <i class="fab fa-github"></i>
+        </span>
+        <span onclick="window.open('#','_blank')">
+          <i class="fas fa-globe"></i>
+        </span>
+      </div>
+    </div>
+  </a>
+
+
+        <!-- Project 2 -->
+        <div href="" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Coffee & Dessert Cafe System</h3>
+              <p>C++</p>
+            </div>
+
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Porject 3 -->
+        <div href="" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Expenses Tracker System</h3>
+              <p>C++</p>
+            </div>
+
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div href="" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Four</h3>
+              <p>React, Redux, SASS</p>
+            </div>
+
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div href="" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Five</h3>
+              <p>React, Redux, SASS</p>
+            </div>
+
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div href="" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Project Six</h3>
+              <p>React, Redux, SASS</p>
+            </div>
+
+            <div class="project-link">
+              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <a href="#" class="btn btn-secondary"
+        target="_blank" >See More <i class="fas fa-arrow-right"></i
+      ></a>
     </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: yourname@email.com</p>
-        <p>GitHub: https://github.com/yourusername</p>
-    </section>
-
-    <script src="index.js"></script>
-</body>
+    <footer id="footer">
+      <div class="container">
+        <a href="mailto:njwshda@gmail.com">njwshda@gmail.com</a>
+        <!-- Social links -->
+        <div class="social">
+          <a href="#" target="_blank"
+            ><img src="./assets/facebook-icon.svg" alt="Facebook"
+          /></a>
+          <a href="#" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a>
+          <a href="#" target="_blank"
+            ><img src="./assets/linkedin-icon.svg" alt="Linkedin"
+          /></a>
+          <a href="#" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
+          <a href="#" target="_blank"
+            ><img src="./assets/hashnode-icon.svg" alt="Hashnode"
+          /></a>
+        </div>
+        <!-- Attribution -->
+        <div class="attribution">
+          <a
+            href="https://github.com/wanajwa/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://user-images.githubusercontent.com/62628408/157202263-9174da24-b19a-4017-9b7c-a1d26ae8f014.svg"
+              alt="attribution"
+              width="150px"
+            />
+          </a>
+        </div>
+        <p>Copyright &copy; Najwa <span id="datee"></span>, All rights reserved</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
 </html>
