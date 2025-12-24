@@ -6,10 +6,34 @@
   <title>Flora Bouquet Flower System</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/utilities.css">
+<style>
+    .github-top-right {
+      position: fixed; /* keep visible regardless of scroll and theme */
+      top: 1rem;
+      right: 1rem; /* top-right corner */
+      width: 26px;
+      height: 26px;
+      z-index: 100; /* above other UI */
+      opacity: 0.95;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      pointer-events: auto;
+    }
+    .github-top-right:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    /* Ensure icon visible in both themes: invert in light mode (default), normal in dark */
+    html:not([data-theme="dark"]) .github-top-right img {
+      filter: invert(1);
+    }
+    [data-theme="dark"] .github-top-right img {
+      filter: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Dark/Light Mode Toggle -->
-  <div class="theme-switch" style="position:absolute; top:1rem; right:1rem; z-index:50;">
+  <div class="theme-switch" style="position:fixed; top:1rem; right:3.5rem; z-index:90;">
   <input type="checkbox" id="switch" />
   <label class="toggle-icons" for="switch">
     <img class="moon" src="assets/moon.svg" />
@@ -19,6 +43,10 @@
 
 
 
+
+  <a href="https://github.com/wanajwa/FloraBouquetFlower" class="github-top-right" aria-label="Open FloraBouquetFlower on GitHub" target="_blank" rel="noopener noreferrer">
+    <img src="assets/github-icon.svg" alt="GitHub" width="26" height="26" />
+  </a>
 
   <!-- Header / Hero section -->
   <header class="header-container">
@@ -45,29 +73,264 @@
       </ul>
     </section>
 
-    <!-- Screenshots / Images -->
-    <section class="co-gallery">
-      <div class="co-card">
-        <img src="assets/project/flower1.jpg" alt="Screenshot 1">
+    <!-- Output Section 
+    <section style="margin-top:2rem;">
+      <h2>Output</h2> -->
+
+      <!-- Frontpage -->
+      <h2 style="margin-top:1rem;">Frontpage</h2>
+      <div class="screenshot-grid">
+        <div class="screenshot-card">
+          <figure>
+            <img class="screenshot-img" src="assets/project/Flora/frontpage.png" alt="Frontpage">
+            <figcaption class="screenshot-caption">Frontpage</figcaption>
+          </figure>
+        </div>
       </div>
-      <div class="co-card">
-        <img src="assets/project/flower2.jpg" alt="Screenshot 2">
-      </div>
-      <div class="co-card">
-        <img src="assets/project/flower3.jpg" alt="Screenshot 3">
-      </div>
+
+      <!-- =============================
+     ADMIN & STAFF (DISABLED)
+============================== -->
+
+<!--
+<h3 style="margin-top:1.5rem;">Admin</h3>
+<div class="screenshot-grid">
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraAdminMenu.png" alt="Admin Menu page">
+      <figcaption class="screenshot-caption">Admin Menu page</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraAdmin.png" alt="Admin Login">
+      <figcaption class="screenshot-caption">Admin Login</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraAddStaff.png" alt="Admin Add Staff">
+      <figcaption class="screenshot-caption">Admin Add Staff</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraDeleteStaff.png" alt="Admin Delete Staff">
+      <figcaption class="screenshot-caption">Admin Delete Staff</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraUpdateStaff.png" alt="Admin Update Staff">
+      <figcaption class="screenshot-caption">Admin Update Staff</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraSearchStaff.png" alt="Admin Search Staff">
+      <figcaption class="screenshot-caption">Admin Search Staff</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Admin/FloraGenerateSales.png" alt="Admin Generate Sales">
+      <figcaption class="screenshot-caption">Admin Generate Sales</figcaption>
+    </figure>
+  </div>
+
+</div>
+
+<h3 style="margin-top:1.5rem;">Staff</h3>
+<div class="screenshot-grid">
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraStaff.png" alt="Staff Login">
+      <figcaption class="screenshot-caption">Staff Login</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraStaffMenu.png" alt="Staff Menu">
+      <figcaption class="screenshot-caption">Staff Menu</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraBouquetPackage.png" alt="Bouquet Package Menu">
+      <figcaption class="screenshot-caption">Bouquet Package Menu</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraStockBouquet.png" alt="Stock Menu">
+      <figcaption class="screenshot-caption">Stock Menu</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraSaleBouquet.png" alt="Sales Menu">
+      <figcaption class="screenshot-caption">Sales Menu</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraCustomer.png" alt="Customer Menu">
+      <figcaption class="screenshot-caption">Customer Menu</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraCategoryFlower.png" alt="Add Category">
+      <figcaption class="screenshot-caption">Add Category</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraDeleteCategory.png" alt="Delete Category">
+      <figcaption class="screenshot-caption">Delete Category</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraAddBouquetPackage.png" alt="Add Bouquet Package">
+      <figcaption class="screenshot-caption">Add Bouquet Package</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraDeleteBouquetPackage.png" alt="Delete Bouquet Package">
+      <figcaption class="screenshot-caption">Delete Bouquet Package</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraUpdateBouquetPackage.png" alt="Update Bouquet Package">
+      <figcaption class="screenshot-caption">Update Bouquet Package</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraSearchBouquetPackage.png" alt="Search Bouquet Package">
+      <figcaption class="screenshot-caption">Search Bouquet Package</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraAddStockPackage.png" alt="Add Stock">
+      <figcaption class="screenshot-caption">Add Stock</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraUpdateStock.png" alt="Update Stock">
+      <figcaption class="screenshot-caption">Update Stock</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraSearchStock.png" alt="Search Stock">
+      <figcaption class="screenshot-caption">Search Stock</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraAddSales.png" alt="Add Sales">
+      <figcaption class="screenshot-caption">Add Sales</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraDeleteSales.png" alt="Delete Sales">
+      <figcaption class="screenshot-caption">Delete Sales</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraUpdateSales.png" alt="Update Sales">
+      <figcaption class="screenshot-caption">Update Sales</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraSearchSale.png" alt="Search Sales">
+      <figcaption class="screenshot-caption">Search Orders</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraAddCustomer.png" alt="Add Customer">
+      <figcaption class="screenshot-caption">Add Customer</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FLoraDeleteCustomer.png" alt="Delete Customer">
+      <figcaption class="screenshot-caption">Delete Customer</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraUpdateCustomer.png" alt="Update Customer">
+      <figcaption class="screenshot-caption">Update Customer</figcaption>
+    </figure>
+  </div>
+
+  <div class="screenshot-card">
+    <figure>
+      <img class="screenshot-img" src="assets/project/Flora/Staff/FloraSearchCustomer.png" alt="Search Customer">
+      <figcaption class="screenshot-caption">Search Customer</figcaption>
+    </figure>
+  </div>
+
+</div>
+-->
+
     </section>
 
-    <!-- Project Links -->
-    <section style="margin-top:2rem;">
-      <a href="https://github.com/wanajwa/FloraBouquet" target="_blank" class="btn btn-primary">GitHub</a>
-      <a href="#" target="_blank" class="btn btn-primary">Live Demo</a>
-    </section>
+
 
     <!-- Back to Portfolio with Home Icon -->
     <a href="index.html" class="back-arrow">
-      <span class="home-icon">&#8962;</span> Home
+      <svg
+        class="home-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+        aria-hidden="true"
+      >
+        <path d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z"/>
+      </svg>
+      Home
     </a>
+
   </main>
 
   <!-- Dark Mode Script -->

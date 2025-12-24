@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcel Management System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utilities.css">
+<style>
+    .github-top-right {
+      position: fixed; /* keep visible regardless of scroll and theme */
+      top: 1rem;
+      right: 1rem; /* top-right corner */
+      width: 26px;
+      height: 26px;
+      z-index: 100; /* above other UI */
+      opacity: 0.95;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      pointer-events: auto;
+    }
+    .github-top-right:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    /* Ensure icon visible in both themes: invert in light mode (default), normal in dark */
+    html:not([data-theme="dark"]) .github-top-right img {
+      filter: invert(1);
+    }
+    [data-theme="dark"] .github-top-right img {
+      filter: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark/Light Mode Toggle -->
+  <div class="theme-switch" style="position:fixed; top:1rem; right:3.5rem; z-index:90;">
+    <input type="checkbox" id="switch" />
+    <label class="toggle-icons" for="switch">
+      <img class="moon" src="assets/moon.svg" />
+      <img class="sun" src="assets/sun.svg" />
+    </label>
+  </div>
+
+  <a href="https://github.com/wanajwa/ParcelManagement" class="github-top-right" aria-label="Open Coffee-DessertCafe on GitHub" target="_blank" rel="noopener noreferrer">
+    <img src="assets/github-icon.svg" alt="GitHub" width="26" height="26" />
+  </a>
+
+  <!-- Header / Hero section -->
+  <header class="header-container">
+    <img class="profile-image" src="assets/Parcel.jpg" alt="Parcel Management System Project">
+    <h1>Parcel Management System</h1>
+    <p>C++ | Academic Project</p>
+    <div class="content-text">
+      <p>
+        This C++ application manages parcel data for UTeM students, featuring advanced 
+        sorting and searching algorithms, delivery fee calculation, sales reporting, and 
+        delivery company analytics. The system handles 10,000 parcel records efficiently.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Key Features -->
+    <section class="project-section">
+      <h2>Key Features</h2>
+      <ul class="feature-list">
+        <li><span class="feature-icon">📦</span> Manage parcel data (10,000 records)</li>
+        <li><span class="feature-icon">🔍</span> Advanced searching (Binary & Linear Search)</li>
+        <li><span class="feature-icon">📊</span> Efficient sorting (Merge Sort & Quick Sort)</li>
+        <li><span class="feature-icon">💰</span> Automatic delivery fee calculation</li>
+        <li><span class="feature-icon">📈</span> Sales and delivery company reporting</li>
+        <li><span class="feature-icon">💾</span> CSV file integration for data persistence</li>
+        <li><span class="feature-icon">⏱️</span> Performance timing for algorithm analysis</li>
+      </ul>
+    </section>
+
+    <!-- Frontpage -->
+      <h2 style="margin-top:1rem;">Frontpage</h2>
+      <div class="screenshot-grid">
+        <div class="screenshot-card">
+          <figure>
+            <img class="screenshot-img" src="assets/FrontPageParcel.png" alt="Frontpage">
+            <figcaption class="screenshot-caption">Frontpage</figcaption>
+          </figure>
+        </div>
+      </div>
+
+
+
+    <!-- Back to Portfolio with Home Icon -->
+    <a href="index.html" class="back-arrow">
+      <svg
+        class="home-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+        aria-hidden="true"
+      >
+        <path d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z"/>
+      </svg>
+      Home
+    </a>
+  </main>
+
+  <!-- Dark Mode Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>

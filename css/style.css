@@ -266,9 +266,13 @@ body {
 }
 
 .home-icon {
-  font-size: 1.2rem; /* make icon slightly bigger */
-  line-height: 1;
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor; /* NOW works */
+  color: var(--text-color); /* will adapt to light/dark */
 }
+
+
 
 
 

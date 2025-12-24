@@ -98,6 +98,7 @@
           </h1> -->
           <!-- Navbar links -->
           <ul class="nav-menu">
+            <li><a class="nav-link" href="#hero">HOME</a></li>
             <li><a class="nav-link" href="#about-me">ABOUT ME</a></li>
             <li><a class="nav-link" href="#projects">PROJECTS</a></li>
             <li><a class="nav-link" id="nav-contact" href="#footer">CONTACT</a></li>
@@ -128,13 +129,12 @@
           alt=""
         />
         <h1>Hi I'm Wan Najwa</h1>
-        <p>Computer Science Student | Software Developer</p>
+        <p>Computer Science | Software Development Student</p>
         <div class="content-text">
-          <h2>Building digital</h2>
-          <h2>products, brands, and experience.</h2>
+          <h2>Building functional,</h2>
+          <h2>user-friendly digital products.</h2>
 
           <p>
-            Welcome to my e-portfolio! This portfolio showcases my academic journey, technical skills, and personal growth as a Computer Science student.
           </p>
         </div>
         <a
@@ -157,7 +157,7 @@
         <div class="about-text content-text">
           <h2 class="about-title">About Me</h2>
           <p class="about-desc">
-            Hello! My name is Najwa, and I am a second-year Computer Science student with a strong interest in software development and system design. I am motivated to continuously improve my technical skills and apply my knowledge through hands-on academic projects. This portfolio highlights my learning journey, technical abilities, and personal development throughout my studies.
+            Hello! My name is Najwa, and I am a third-year Software Development student with a strong interest in software development and system design. I am motivated to continuously improve my technical skills and apply my knowledge through hands-on academic projects. This portfolio highlights my learning journey, technical abilities, and personal development throughout my studies.
           </p>
         </div>
       </div>
@@ -209,11 +209,11 @@
         </div>
 
         <div class="timeline-item">
-          <img class="timeline-img" src="assets/profile-image.svg" alt="UTeM" />
+          <img id="timeline-img-utem" class="timeline-img" src="assets/education/UTeM.PNG" alt="UTeM" />
           <div class="timeline-year">2023 - Present</div>
           <div class="timeline-content">
             <h3>Universiti Teknikal Malaysia Melaka</h3>
-            <p>Bachelor / Current studies</p>
+            <p>Bachelor of Computer Science (Software Development)</p>
             <ul class="timeline-experience">
               <li>Coursework: Data Structures, Algorithms, Database Systems</li>
               <li>Member of Coding Club; building web projects</li>
@@ -225,7 +225,7 @@
       <div class="co-layout">
         <div class="co-text">
           <h3 class="about-subtitle">Co-curricular</h3>
-          <p class="co-desc">In addition to my academic pursuits, I was actively involved in co-curricular activities and served as the Vice President of the Gamelan Club at my university during the previous semester. Through this role, I developed strong leadership, teamwork, and communication skills, as gamelan performances require high levels of coordination, discipline, and collaboration among members. Managing leadership responsibilities alongside academic commitments strengthened my time management and organizational skills, which are essential in both academic and professional environments.</p>
+          <p class="co-desc">In addition to my academic pursuits, I was actively involved in the Gamelan Club at my university. Through this role, I developed strong leadership, teamwork, and communication skills, as gamelan performances require high levels of coordination, discipline, and collaboration among members. Managing leadership responsibilities alongside academic commitments strengthened my time management and organizational skills, which are essential in both academic and professional environments.</p>
         </div>
       </div>
 
@@ -254,28 +254,28 @@
 
       <article class="project">
          <!-- Project 1 -->
-  <a href="project-flora.html" class="card">
-    <div class="project-info">
-      <div class="project-bio">
-        <h3>Flora Bouquet Flower System</h3>
-        <p>C++</p>
-      </div>
+        <a href="project-flora.html" class="card">
+          <div class="project-info">
+            <div class="project-bio">
+              <h3>Flora Bouquet Flower System</h3>
+              <p>C++</p>
+            </div>
 
-      <div class="project-link">
-        <!-- Use span or button instead of a inside the card -->
-        <span onclick="window.open('https://github.com/wanajwa/FloraBouquet','_blank')">
-          <i class="fab fa-github"></i>
-        </span>
-        <span onclick="window.open('#','_blank')">
-          <i class="fas fa-globe"></i>
-        </span>
-      </div>
-    </div>
-  </a>
+            <div class="project-link">
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/wanajwa/FloraBouquetFlower','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
+            </div>
+          </div>
+        </a>
 
 
         <!-- Project 2 -->
-        <div href="" class="card">
+        <a href="project-cafe.html" class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Coffee & Dessert Cafe System</h3>
@@ -283,14 +283,19 @@
             </div>
 
             <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/wanajwa/Coffee-DessertCafe','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
 
-        <!-- Porject 3 -->
-        <div href="" class="card">
+        <!-- Project 3 -->
+        <a href="project-tracker.html" class="card">
           <div class="project-info">
             <div class="project-bio">
               <h3>Expenses Tracker System</h3>
@@ -298,61 +303,81 @@
             </div>
 
             <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/wanajwa/ExpensesTracker','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 4 -->
-        <div href="" class="card">
+        <a href="project-EPine.html" class="card">
           <div class="project-info">
             <div class="project-bio">
-              <h3>Project Four</h3>
-              <p>React, Redux, SASS</p>
+              <h3>EPine Application</h3>
+              <p>Kotlin</p>
             </div>
 
             <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/wanajwa/EPine','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 5 -->
-        <div href="" class="card">
+        <a href="project-eBaazar.html" class="card">
           <div class="project-info">
             <div class="project-bio">
-              <h3>Project Five</h3>
-              <p>React, Redux, SASS</p>
+              <h3>eBaazar Application</h3>
+              <p>Java</p>
             </div>
 
             <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/Annefa04/EBazzar','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
             </div>
           </div>
-        </div>
+        </a>
 
         <!-- Project 6 -->
-        <div href="" class="card">
+       <a href="project-parcel.html" class="card">
           <div class="project-info">
             <div class="project-bio">
-              <h3>Project Six</h3>
-              <p>React, Redux, SASS</p>
+              <h3>Parcel Management System</h3>
+              <p>C++</p>
             </div>
 
             <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
+              <!-- Use span or button instead of a inside the card -->
+              <span onclick="window.open('https://github.com/wanajwa/ParcelManagement','_blank')">
+                <i class="fab fa-github"></i>
+              </span>
+              <span onclick="window.open('#','_blank')">
+                <i class="fas fa-globe"></i>
+              </span>
             </div>
           </div>
-        </div>
-      </article>
-
+        </a>
+<!--
       <a href="#" class="btn btn-secondary"
         target="_blank" >See More <i class="fas fa-arrow-right"></i
       ></a>
+  -->
     </section>
 
     <footer id="footer">
@@ -379,11 +404,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src="https://user-images.githubusercontent.com/62628408/157202263-9174da24-b19a-4017-9b7c-a1d26ae8f014.svg"
-              alt="attribution"
-              width="150px"
-            />
+
           </a>
         </div>
         <p>Copyright &copy; Najwa <span id="datee"></span>, All rights reserved</p>

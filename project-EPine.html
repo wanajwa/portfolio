@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EPine – Smart Pineapple Farming System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <style>
+    .github-top-right {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      width: 26px;
+      height: 26px;
+      z-index: 100;
+      opacity: 0.95;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      pointer-events: auto;
+    }
+    .github-top-right:hover {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    html:not([data-theme="dark"]) .github-top-right img {
+      filter: invert(1);
+    }
+    [data-theme="dark"] .github-top-right img {
+      filter: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark/Light Mode Toggle -->
+  <div class="theme-switch" style="position:fixed; top:1rem; right:3.5rem; z-index:90;">
+    <input type="checkbox" id="switch" />
+    <label class="toggle-icons" for="switch">
+      <img class="moon" src="assets/moon.svg" />
+      <img class="sun" src="assets/sun.svg" />
+    </label>
+  </div>
+
+  <!-- GitHub Link -->
+  <a href="https://github.com/wanajwa/EPine" class="github-top-right" aria-label="Open EPine Project on GitHub" target="_blank" rel="noopener noreferrer">
+    <img src="assets/github-icon.svg" alt="GitHub" width="26" height="26" />
+  </a>
+
+  <!-- Header / Hero Section -->
+  <header class="header-container">
+    <img class="profile-image" src="assets/project/EPine.png" alt="EPine Project">
+    <h1>EPine – Smart Pineapple Farming System</h1>
+    <p>Kotlin | SULAM Project</p>
+    <div class="content-text">
+      <p>
+        EPine is a mobile application developed to help pineapple farmers monitor and manage their farms efficiently. 
+        Farmers can report diseases, track sales records, view profit summaries, and access promotional information. 
+        The system improves farm productivity and supports better decision-making in pineapple cultivation.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Features Section -->
+    <section class="project-section">
+      <h2>Features</h2>
+      <ul class="justified-list">
+        <li>Login system for farmers and vendors</li>
+        <li>Report pineapple diseases with photos</li>
+        <li>Track and add daily sales records</li>
+        <li>View monthly and yearly profit summaries</li>
+        <li>View product and promotion details</li>
+        <li>Navigation between app fragments/pages</li>
+        <li>Secure logout functionality</li>
+      </ul>
+    </section>
+
+      <!-- Home / Dashboard -->
+      <h2 style="margin-top:1rem;">Dashboard Navigation Design</h2>
+      <div class="screenshot-grid">
+        <div class="screenshot-card">
+          <figure>
+            <img class="screenshot-img" src="assets/EPineNav.png" alt="Home">
+            <figcaption class="screenshot-caption">Home / Dashboard</figcaption>
+          </figure>
+        </div>
+      </div>
+
+
+    <!-- SULAM Collaboration Section -->
+    <section class="project-section" style="margin-top:2rem;">
+      <h2>Collaboration with SULAM</h2>
+      <p>
+        EPine was developed in collaboration with <strong>Service Learning Malaysia (SULAM)</strong>, 
+        a university initiative aimed at using technology to benefit society. 
+        This partnership ensured that the system addresses real community needs for pineapple farmers.
+      </p>
+
+      <div class="screenshot-grid">
+        <div class="screenshot-card">
+          <figure>
+            <img class="screenshot-img" src="assets/SULAM.jpg" alt="SULAM Collaboration">
+            <figcaption class="screenshot-caption">SULAM Collaboration Meeting</figcaption>
+          </figure>
+        </div>
+
+    </section>
+
+    <!-- Back to Portfolio with Home Icon -->
+    <a href="index.html" class="back-arrow">
+      <svg
+        class="home-icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 50 50"
+        aria-hidden="true"
+      >
+        <path d="M 25 1.0507812 C 24.7825 1.0507812 24.565859 1.1197656 24.380859 1.2597656 L 1.3808594 19.210938 C 0.95085938 19.550938 0.8709375 20.179141 1.2109375 20.619141 C 1.5509375 21.049141 2.1791406 21.129062 2.6191406 20.789062 L 4 19.710938 L 4 46 C 4 46.55 4.45 47 5 47 L 19 47 L 19 29 L 31 29 L 31 47 L 45 47 C 45.55 47 46 46.55 46 46 L 46 19.710938 L 47.380859 20.789062 C 47.570859 20.929063 47.78 21 48 21 C 48.3 21 48.589063 20.869141 48.789062 20.619141 C 49.129063 20.179141 49.049141 19.550938 48.619141 19.210938 L 25.619141 1.2597656 C 25.434141 1.1197656 25.2175 1.0507812 25 1.0507812 z M 35 5 L 35 6.0507812 L 41 10.730469 L 41 5 L 35 5 z"/>
+      </svg>
+      Home
+    </a>
+  </main>
+
+  <!-- Dark Mode Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
