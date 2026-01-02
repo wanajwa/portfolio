@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Wan Najwa Portfolio</title>
 
   <!--
     - favicon
@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/Myself.png" alt="Richard hanrick" width="80">
+          <img src="./assets/images/Myself.png" alt="Wan Najwa" width="80">
         </figure>
 
         <div class="info-content">
@@ -88,7 +88,7 @@
             <div class="contact-info">
               <p class="contact-title">Phone</p>
 
-              <a href="tel:+12133522795" class="contact-link">0175759943</a>
+              <a href="tel:0175759943" class="contact-link">0175759943</a>
             </div>
 
           </li>
@@ -208,15 +208,31 @@
           <h2 class="h2 article-title">About me</h2>
         </header>
 
-        <section class="about-text">
-          <p>
-            Hello! My name is Najwa, and I am a third-year Software Development student with a strong interest in software development and system design. I am motivated to continuously improve my technical skills and apply my knowledge through hands-on academic projects. This portfolio highlights my learning journey, technical abilities, and personal development throughout my studies.
-          </p>
+        <section class="about-content">
 
-          <p>
+        <!-- LEFT: Image -->
+        <figure class="about-img">
+          <img src="./assets/images/Myself2.jpg" alt="Wan Najwa">
+        </figure>
 
-          </p>
-        </section>
+        <!-- RIGHT: Text -->
+        <div class="about-text">
+
+        <p>
+          Hello! My name is Najwa, and I am a third-year Software Development student with a strong interest in software development and system design. I enjoy building functional systems and transforming ideas into practical, user-focused solutions.
+        </p>
+
+        <p>
+          Throughout my academic journey, I have worked on various projects involving C++ programming, web development, mobile applications, and system analysis. These experiences have strengthened my problem-solving skills, logical thinking, and understanding of software architecture.
+        </p>
+
+        <p>
+          I am always eager to learn new technologies, improve my technical skills, and gain hands-on experience through projects and collaboration.
+        </p>
+
+      </div>
+
+      </section>
 
 
         <!--
@@ -821,9 +837,7 @@
 
         <section class="mapbox" data-mapbox>
           <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.565430592712!2d102.31854147450247!3d2.3137969976659662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e46c6eaa869b%3A0xb8935957e3536888!2sUniversiti%20Teknikal%20Malaysia%20Melaka!5e0!3m2!1sen!2smy!4v1767340863768!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </figure>
         </section>
 
@@ -841,7 +855,8 @@
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
+            <button class="form-btn" type="submit" data-form-btn>
+
               <ion-icon name="paper-plane"></ion-icon>
               <span>Send Message</span>
             </button>
@@ -871,6 +886,14 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("ZAeMelgQYcxrPNwzG");
+</script>
+
+<script src="./assets/js/script.js"></script>
+
+
 
 </body>
 

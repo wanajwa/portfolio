@@ -1,168 +1,155 @@
 'use strict';
 
-/* =========================
-   TOGGLE FUNCTION
-========================= */
-const elementToggleFunc = function (elem) {
-  elem.classList.toggle("active");
-};
+document.addEventListener("DOMContentLoaded", () => {
 
-/* =========================
-   SIDEBAR
-========================= */
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+  /* =========================
+     TOGGLE FUNCTION
+  ========================= */
+  const elementToggleFunc = (elem) => {
+    elem.classList.toggle("active");
+  };
 
-sidebarBtn.addEventListener("click", function () {
-  elementToggleFunc(sidebar);
-});
+  /* =========================
+     SIDEBAR
+  ========================= */
+  const sidebar = document.querySelector("[data-sidebar]");
+  const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-/* =========================
-   CATEGORY MAPPING
-   (UI label -> internal value)
-========================= */
-const categoryMap = {
-  "c++ programming": "cpp",
-  "design": "design"
-};
-
-/* =========================
-   CUSTOM SELECT
-========================= */
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () {
-  elementToggleFunc(this);
-});
-
-/* =========================
-   FILTER ITEMS
-========================= */
-const filterItems = document.querySelectorAll("[data-filter-item]");
-
-const filterFunc = function (selectedValue) {
-
-  const normalizedValue = categoryMap[selectedValue] || selectedValue;
-
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (normalizedValue === "all") {
-      filterItems[i].classList.add("active");
-    } 
-    else if (normalizedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } 
-    else {
-      filterItems[i].classList.remove("active");
-    }
-
+  if (sidebarBtn) {
+    sidebarBtn.addEventListener("click", () => {
+      elementToggleFunc(sidebar);
+    });
   }
-};
 
-/* =========================
-   SELECT DROPDOWN EVENTS
-========================= */
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
+  /* =========================
+     CATEGORY MAPPING
+  ========================= */
+  const categoryMap = {
+    "c++ programming": "cpp",
+    "design": "design"
+  };
 
-    const selectedValue = this.innerText.toLowerCase().trim();
+  /* =========================
+     CUSTOM SELECT & FILTER
+  ========================= */
+  const select = document.querySelector("[data-select]");
+  const selectItems = document.querySelectorAll("[data-select-item]");
+  const selectValue = document.querySelector("[data-selecct-value]");
+  const filterBtn = document.querySelectorAll("[data-filter-btn]");
+  const filterItems = document.querySelectorAll("[data-filter-item]");
 
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
+  const filterFunc = (value) => {
+    const normalized = categoryMap[value] || value;
 
+    filterItems.forEach(item => {
+      item.classList.toggle(
+        "active",
+        normalized === "all" || normalized === item.dataset.category
+      );
+    });
+  };
+
+  if (select) {
+    select.addEventListener("click", () => elementToggleFunc(select));
+  }
+
+  selectItems.forEach(item => {
+    item.addEventListener("click", function () {
+      const value = this.innerText.toLowerCase().trim();
+      selectValue.innerText = this.innerText;
+      elementToggleFunc(select);
+      filterFunc(value);
+    });
   });
-}
 
-/* =========================
-   FILTER BUTTON EVENTS
-========================= */
-let lastClickedBtn = filterBtn[0];
+  let lastClickedBtn = filterBtn[0];
+  filterBtn.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const value = this.innerText.toLowerCase().trim();
+      selectValue.innerText = this.innerText;
+      filterFunc(value);
 
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    const selectedValue = this.innerText.toLowerCase().trim();
-
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
+      lastClickedBtn.classList.remove("active");
+      this.classList.add("active");
+      lastClickedBtn = this;
+    });
   });
 
-}
-
-/* =========================
-   CONTACT FORM VALIDATION
+  /* =========================
+   CONTACT FORM + EMAILJS
 ========================= */
 const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+if (form && formBtn) {
 
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+  // Initial state (IMPORTANT)
+  formBtn.disabled = !form.checkValidity();
 
+  // Re-check on every input
+  form.addEventListener("input", () => {
+    formBtn.disabled = !form.checkValidity();
+  });
+
+  // Submit (EmailJS)
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    formBtn.disabled = true;
+
+    emailjs.sendForm(
+      "service_41ma4oi",        // ✅ your service ID
+      "template_llkc6s8",      // 🔁 replace with real template ID
+      form
+    ).then(() => {
+      alert("Message sent successfully!");
+      form.reset();
+      formBtn.disabled = true;
+    }).catch(err => {
+      console.error(err);
+      alert("Failed to send message.");
+      formBtn.disabled = false;
+    });
   });
 }
 
-/* =========================
-   PAGE NAVIGATION
-========================= */
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
 
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+  /* =========================
+     PAGE NAVIGATION
+  ========================= */
+  const navigationLinks = document.querySelectorAll("[data-nav-link]");
+  const pages = document.querySelectorAll("[data-page]");
 
-    for (let j = 0; j < pages.length; j++) {
-
-      if (this.innerHTML.toLowerCase() === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-        navigationLinks[j].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[j].classList.remove("active");
-        navigationLinks[j].classList.remove("active");
-      }
-
-    }
-
+  navigationLinks.forEach((link, index) => {
+    link.addEventListener("click", function () {
+      pages.forEach((page, i) => {
+        const active = this.innerText.toLowerCase() === page.dataset.page;
+        page.classList.toggle("active", active);
+        navigationLinks[i].classList.toggle("active", active);
+      });
+      window.scrollTo(0, 0);
+    });
   });
-}
 
-/* =========================
-   LIGHT / DARK MODE
-========================= */
-const themeToggle = document.getElementById("themeToggle");
-const body = document.body;
+  /* =========================
+     LIGHT / DARK MODE
+  ========================= */
+  const themeToggle = document.getElementById("themeToggle");
+  const body = document.body;
 
-// Load saved theme
-if (localStorage.getItem("theme") === "light") {
-  body.classList.add("light-theme");
-  themeToggle.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
-}
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-theme");
+    themeToggle.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
+  }
 
-themeToggle.addEventListener("click", () => {
-  body.classList.toggle("light-theme");
+  themeToggle.addEventListener("click", () => {
+    body.classList.toggle("light-theme");
+    const isLight = body.classList.contains("light-theme");
 
-  const isLight = body.classList.contains("light-theme");
+    themeToggle.innerHTML = isLight
+      ? '<ion-icon name="sunny-outline"></ion-icon>'
+      : '<ion-icon name="moon-outline"></ion-icon>';
 
-  themeToggle.innerHTML = isLight
-    ? '<ion-icon name="sunny-outline"></ion-icon>'
-    : '<ion-icon name="moon-outline"></ion-icon>';
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+  });
 
-  localStorage.setItem("theme", isLight ? "light" : "dark");
 });

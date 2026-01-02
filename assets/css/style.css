@@ -570,17 +570,57 @@ body.light-theme .theme-toggle:hover {
   #ABOUT
 \*-----------------------------------*/
 
-.about .article-title { margin-bottom: 15px; }
+.about .article-title {
+  margin-bottom: 15px;
+}
 
+/* Layout: image + text side by side */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 0px;
+}
+
+/* Image container */
+.about-img {
+  width: 180px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+/* Image */
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Text */
 .about-text {
+  flex: 1;
   color: var(--light-gray);
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
   line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
-.about-text p { margin-bottom: 15px; }
+.about-text p {
+  margin: 0 0 15px 0;
+}
 
+/* Mobile */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 
 
 /**
@@ -1042,6 +1082,28 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
+/* ===== Light Mode: Fix Send Message Button ===== */
+
+body.light-theme .form-btn {
+  background: #f1f1f1;
+  color: #333;
+}
+
+body.light-theme .form-btn::before {
+  background: #ffffff;
+}
+
+body.light-theme .form-btn:hover {
+  background: #e0e0e0;
+}
+
+body.light-theme .form-btn:hover::before {
+  background: #ffffff;
+}
+
+body.light-theme .form-btn:disabled {
+  opacity: 0.6;
+}
 
 
 
@@ -1629,7 +1691,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { 
+    width: 150px;
+    border-radius: 16px;
+  }
 
   .info-content .name {
     white-space: nowrap;
