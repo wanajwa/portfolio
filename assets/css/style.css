@@ -2,14 +2,9 @@
   #style.css
 \*-----------------------------------*/
 
-
 /**
  * copyright 2022 @codewithsadee
  */
-
-
-
-
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -28,26 +23,31 @@
     hsl(240, 1%, 25%) 3%, 
     hsl(0, 0%, 19%) 97%
   );
+
   --bg-gradient-jet: linear-gradient(
     to bottom right, 
     hsla(240, 1%, 18%, 0.251) 0%, 
     hsla(240, 2%, 11%, 0) 100%
   ), hsl(240, 2%, 13%);
+
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
     hsl(45, 100%, 71%) 0%, 
     hsla(36, 100%, 69%, 0) 50%
   );
+
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
     hsla(45, 100%, 71%, 0.251) 0%, 
     hsla(35, 100%, 68%, 0) 59.86%
   ), hsl(240, 2%, 13%);
+
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(0, 0%, 25%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
+
   --text-gradient-yellow: linear-gradient(
     to right, 
     hsl(45, 100%, 72%), 
@@ -73,10 +73,8 @@
    * typography
    */
 
-  /* font-family */
   --ff-poppins: 'Poppins', sans-serif;
 
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -86,7 +84,6 @@
   --fs-7: 13px;
   --fs-8: 11px;
 
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
@@ -108,11 +105,49 @@
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
-
 }
 
+/* =========================
+   LIGHT THEME (CORRECT PLACE)
+========================= */
+body.light-theme {
 
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 98%),
+    hsl(0, 0%, 92%)
+  );
 
+  --bg-gradient-jet: hsl(0, 0%, 96%);
+
+  --border-gradient-onyx: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 80%),
+    hsl(0, 0%, 90%)
+  );
+
+  --eerie-black-1: hsl(0, 0%, 100%);
+  --eerie-black-2: hsl(0, 0%, 98%);
+  --onyx: hsl(0, 0%, 90%);
+  --jet: hsl(0, 0%, 80%);
+  --smoky-black: hsl(0, 0%, 96%);
+
+  --white-1: hsl(0, 0%, 15%);
+  --white-2: hsl(0, 0%, 10%);
+  --light-gray: hsl(0, 0%, 30%);
+  --light-gray-70: hsl(0, 0%, 45%);
+
+  --text-gradient-yellow: linear-gradient(
+    to right,
+    hsl(35, 80%, 45%),
+    hsl(45, 90%, 50%)
+  );
+
+  --shadow-1: 0 8px 20px hsla(0, 0%, 0%, 0.08);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.1);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.12);
+
+}
 
 
 /*-----------------------------------*\
@@ -454,6 +489,49 @@ main {
   #NAVBAR
 \*-----------------------------------*/
 
+/* =========================
+   THEME TOGGLE BUTTON
+========================= */
+.theme-toggle {
+  color: var(--light-gray);
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--orange-yellow-crayola);
+}
+
+/* LIGHT MODE NAVBAR FIX */
+body.light-theme .navbar {
+  background: hsla(0, 0%, 95%, 0.95);
+  border-color: hsl(0, 0%, 85%);
+}
+
+body.light-theme .navbar-link {
+  color: hsl(0, 0%, 30%);
+}
+
+body.light-theme .navbar-link.active {
+  color: hsl(35, 90%, 45%);
+}
+
+/* LIGHT MODE SHADOWS */
+body.light-theme {
+  --shadow-1: 0 8px 20px hsla(0, 0%, 0%, 0.08);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.1);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.12);
+}
+
+body.light-theme .theme-toggle {
+  color: hsl(0, 0%, 35%);
+}
+
+body.light-theme .theme-toggle:hover {
+  color: hsl(35, 90%, 45%);
+}
 .navbar {
   position: fixed;
   bottom: 0;
@@ -486,9 +564,6 @@ main {
 .navbar-link:focus { color: var(--light-gray-70); }
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
-
-
-
 
 
 /*-----------------------------------*\
@@ -1598,4 +1673,39 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+/* =====================================================
+   FINAL LIGHT MODE ICON + ICON-BOX FIX (DO NOT EDIT)
+===================================================== */
+
+/* 1️⃣ Remove yellow gradient ring */
+body.light-theme .icon-box {
+  background: hsl(0, 0%, 85%) !important;
+  color: #000 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* 2️⃣ Inner box background */
+body.light-theme .icon-box::before {
+  background: #ffffff !important;
+}
+
+/* 3️⃣ Force ion-icon to black */
+body.light-theme .icon-box ion-icon {
+  color: #000 !important;
+}
+
+/* 4️⃣ Social icons */
+body.light-theme .social-item .social-link {
+  color: #000 !important;
+}
+
+body.light-theme .social-item .social-link:hover {
+  color: hsl(35, 90%, 45%) !important;
+}
+
+/* 5️⃣ Service SVG icons (img-based) */
+body.light-theme .service-icon-box img {
+  filter: brightness(0) saturate(100%);
 }

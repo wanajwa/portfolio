@@ -142,3 +142,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+/* =========================
+   LIGHT / DARK MODE
+========================= */
+const themeToggle = document.getElementById("themeToggle");
+const body = document.body;
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+  body.classList.add("light-theme");
+  themeToggle.innerHTML = '<ion-icon name="sunny-outline"></ion-icon>';
+}
+
+themeToggle.addEventListener("click", () => {
+  body.classList.toggle("light-theme");
+
+  const isLight = body.classList.contains("light-theme");
+
+  themeToggle.innerHTML = isLight
+    ? '<ion-icon name="sunny-outline"></ion-icon>'
+    : '<ion-icon name="moon-outline"></ion-icon>';
+
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
