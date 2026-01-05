@@ -930,7 +930,7 @@ body.light-theme .theme-toggle:hover {
   --scale: 0.8;
 
   background: var(--jet);
-  color: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
   position: absolute;
   top: 50%;
   left: 50%;
