@@ -733,11 +733,27 @@ body.light-theme .theme-toggle:hover {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+.timeline-description {
+  color: var(--light-gray);
+  font-weight: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+
+  list-style-type: disc;   /* 🔴 force bullet */
+  padding-left: 0px;      /* space for bullet */
+  margin-top: 8px;
 }
+
+.timeline-text li {
+  margin-bottom: 6px;
+}
+
 
 
 /**
